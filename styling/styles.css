@@ -1,0 +1,412 @@
+:root {
+  --primary-color: #dac772;
+  --old-primary-color: #7289da;
+  --button-color-g: #679c40;
+  --button-hover-g: #6ea745;
+  --hyperlink-hover-p: #7289da;
+  --old-bg-color-b: #111111;
+  --bg-color: #679c40;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2f3136;
+    overflow: hidden;
+  }
+  
+  .container {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-bar {
+    background-color: rgb(20, 19, 20);
+    display: flex;
+  }
+
+  li, a, button {
+    font-weight: 500;
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+
+  header {
+    background-color: rgba(20, 19, 20);
+    margin:0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 10%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color:#d4d4d8;
+    opacity: 95%;
+  }
+
+  .fane {
+    display: flex;
+    cursor: pointer;
+    font-size: 40px;
+    text-decoration: underline;
+    /*
+    background-color: #2f3136;
+    padding: 0.5%;
+    padding-top:0.2%;
+    border-radius: 8%;
+    */
+    transition: all 0.3s ease 0s;
+  }
+
+  .fane:hover {
+    color: var(--primary-color);
+  }
+
+  .fane.active {
+    color: var(--primary-color);
+  }
+
+  .nav__links {
+
+    justify-content: center;
+    align-items: center;
+    grid-row: inherit;
+  }
+
+  .nav__links li {
+    display: inline-block;
+  }
+
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav__links li a:hover {
+    color: var(--primary-color);
+  }
+
+  .nav__links>.active>a {
+    color: var(--primary-color);
+  }
+
+  button {
+    padding: 9px 25px;
+    margin:auto;
+    background-color: var(--primary-color);
+    box-shadow: inset;
+    outline: 1px solid;
+    outline-color: rgba(255, 255,255 .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1 ,0.22, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+
+  button:hover {
+    background-color: var(--primary-color);
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+  }
+
+  .nav-bar ul {
+    text-wrap: nowrap;
+    object-fit: scale-down;
+    display: flex;
+    grid-column: auto;
+    justify-content: center;
+    flex-direction: row;
+
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+
+
+  .bg-layer {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    animation: scroll 100s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+      var(--bg-color);
+    color: #eee;
+    filter: blur(22px) brightness(70%);
+  }
+  
+  .hero {
+    margin-top: 20vh;
+
+    position:flex;
+
+
+    overflow: hidden;
+    width: fixed auto;
+
+    margin: 15vh;
+    position: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    padding: 35px;
+    background-color: rgb(20, 19, 20);
+    
+    border-width: 1px;
+    border-color: #ffffff9f;
+    border-style: solid;
+    opacity: 95%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .inedx-hero {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inedx-hero .inner {
+    z-index: 1;
+    margin-top: 20vh;
+
+    position:flex;
+
+    width: 100% auto;
+    height: 100% auto;
+
+    overflow: hidden;
+
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    
+    padding: 35px;
+    background-color: rgb(20, 19, 20);
+    
+    border-width: 1px;
+    border-color: #ffffff9f;
+    border-style: solid;
+    
+    opacity: 95%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .inedx-hero::before {
+    content: "";
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(102, 102, 102, 0.75) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    height: 600px;
+    width: 100px;
+    transform: translate(0);
+    position: absolute;
+    animation: rotate 5s linear forwards infinite;
+    z-index: 0;
+    top: 50%;
+    transform-origin: top center;
+  }
+
+  .profile-picture {
+    border-radius: 50%;
+    border-color: #312f2f /*#4341b7*/;
+    border-width: 0.67vh;
+    border-style: solid;
+    box-shadow: 0px 0px 10px 2px #dac772 ;
+  }
+
+  .profile-picture.index {
+    width: 200px;
+    height: auto;
+
+  }
+
+  .hyperlink {
+    font-size: 14px;
+    color: lightskyblue;
+    transition: all 0.3s ease 0s;
+  }
+
+  .hyperlink:hover {
+    color: var(--primary-color);
+
+    
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 1px;
+
+  }
+
+
+  .title {
+    font-size: 3.5rem ;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  .description {
+
+    font-size: 14px;
+    font-display:inherit;
+    color: #d4d4d8;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: min(5vv, 25px);
+  }
+  
+  .buttons {
+    object-fit: scale-down;
+    display: flex;
+    grid-column: auto;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .fane-invite-btn {
+    grid-column: auto;
+    background-color: var(--button-color);
+    margin:10px;
+    color: #fff;
+    border: 0;
+    box-shadow: inset;
+    outline: 1px solid;
+    outline-color: rgba(255, 255,255 .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1 ,0.22, 1);
+    padding: 10px 21px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fane-invite-btn svg {
+    margin-left: 10px;
+    fill: #fff;
+  }
+  
+  .fane-invite-btn:hover {
+    background-color: var(--primary-color);
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+  }
+  
+  .fane-invite-btn:hover svg {
+    fill: #fff;
+  }
+  
+  .discord-invite-btn {
+    grid-column: auto;
+    background-color: var(--button-color);
+    margin:10px;
+    color: #fff;
+    border: 0;
+    box-shadow: inset;
+    outline: 1px solid;
+    outline-color: rgba(255, 255,255 .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1 ,0.22, 1);
+    padding: 10px 21px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .discord-invite-btn svg {
+    margin-left: 10px;
+    fill: #fff;
+  }
+  
+  .discord-invite-btn:hover {
+    background-color: var(--primary-color);
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+  }
+  
+  .discord-invite-btn:hover svg {
+    fill: #fff;
+  }
+  
+
+  @keyframes scroll {
+    100% {
+      background-position: 0px -400%;
+    }
+  }
+  
+  /* Fallback if the operatring system prefers reduced motion*/
+  @media (prefers-reduced-motion) {
+    .wrapper {
+      animation: scroll 800s linear infinite;
+    }
+  }
+/*
+  @media (min-width: 670px) {
+    .title {
+      font-size: 3.5rem;
+    }
+  }
+
+  @media (min-width: 670px) {
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  }
